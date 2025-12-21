@@ -1,5 +1,4 @@
 // backend/models/index.js
-const { sequelize } = require('../config/database');
 const Vendor = require('./Vendor');
 const RFP = require('./RFP');
 const Proposal = require('./Proposal');
@@ -16,7 +15,6 @@ Proposal.belongsTo(RFP, { foreignKey: 'rfp_id' });
 
 // Export everything
 module.exports = {
-    sequelize,
     Vendor,
     RFP,
     Proposal
